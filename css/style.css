@@ -50,10 +50,6 @@
   row-gap: 150px;
 }
 
-.reviews__box {
-  max-width: 370px;
-}
-
 .reviews__more {
   background: none;
   border-radius: 30px;
@@ -78,15 +74,11 @@
   padding-bottom: 100px;
 }
 
-.reviews .reviewer-photo {
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  -o-object-fit: cover;
-     object-fit: cover;
+.reviewer {
+  max-width: 370px;
 }
 
-.reviews .reviewer-head {
+.reviewer__head {
   display: flex;
   -moz-column-gap: 35px;
        column-gap: 35px;
@@ -94,43 +86,52 @@
   font-size: 18px;
 }
 
-.reviews .reviewer-grade {
-  height: 16px;
-  width: 100px;
-  background-image: url(../img/star.png);
-  background-repeat: repeat-x;
-  background-position: 0 50%;
-  background-size: 20px 18px;
-}
-
-.reviews .reviewer-grade-fill {
-  height: 16px;
-  background-image: url(../img/full-star.png);
-  display: block;
-  background-repeat: repeat-x;
-  background-position: 0 50%;
-  background-size: 20px 18px;
-}
-
-.reviews .reviewer-info {
+.reviewer__info {
   min-height: 50px;
   margin-top: 20px;
   line-height: 26px;
   letter-spacing: 0.04em;
 }
 
-.reviews .reviewer-service {
+.reviewer__grade {
+  height: 16px;
+  width: 95px;
+  background-image: url(../img/star.svg);
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  background-size: 19px 17px;
+}
+
+.reviewer__grade-fill {
+  height: 16px;
+  background-image: url(../img/full-star.svg);
+  display: block;
+  background-repeat: repeat-x;
+  background-position: 0 50%;
+  background-size: 19px 17px;
+}
+
+.reviewer__service {
   margin-top: 20px;
 }
 
-.reviews .reviewer-service-details {
+.reviewer__service-details {
   margin-top: 20px;
   font-size: 22px;
   max-width: 250px;
   letter-spacing: 0.04em;
 }
 
-.reviews .reviewer-text {
+.reviewer__photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.reviewer__text {
+  color: #444444;
   line-height: 26px;
   letter-spacing: 0.04em;
   font-weight: 300;
@@ -142,8 +143,8 @@
   overflow: hidden;
 }
 
-.reviews .review-details {
-  margin-top: 40px;
+.review-details {
+  margin-top: 50px;
   color: #22B856;
   border: 1px solid #22B856;
   width: 115px;
@@ -155,7 +156,7 @@
   align-items: center;
 }
 
-.reviews .review-details:hover {
+.review-details:hover {
   background: #22B856;
   color: white;
 }

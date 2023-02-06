@@ -22,55 +22,55 @@ async function createElem() {
 
   // создание контейнера   
   let reviewBox = document.createElement("div");
-  reviewBox.className = 'reviews__box';
+  reviewBox.className = 'reviewer';
 
   //Контейнер для фото и рейтинга
   let reviewerHead = document.createElement("div");
-  reviewerHead.className = 'reviewer-head';
+  reviewerHead.className = 'reviewer__head';
 
   //Контейнер для информации о человеке (Имя и Возраст)
   let reviewerInfo = document.createElement("div");
-  reviewerInfo.className = 'reviewer-info';
+  reviewerInfo.className = 'reviewer__info';
 
   //Создание оценки 
   let grade = document.createElement("div");
-  grade.className = 'reviewer-grade';
+  grade.className = 'reviewer__grade';
 
 
   //Заполнение оценки
   let gradeFill = document.createElement("span");
-  gradeFill.className = 'reviewer-grade-fill';
+  gradeFill.className = 'reviewer__grade-fill';
   gradeFill.style.width = `${20 * json[i].Rating}%`
   //Создание имени
   let name = document.createElement("span");
-  name.className = 'reviewer-name';
+  name.className = 'reviewer__name';
   name.textContent = json[i].Name;
 
   //Cоздание возраста
   let age = document.createElement("span");
-  age.className = 'reviewer-age';
+  age.className = 'reviewer__age';
   age.textContent = json[i].Age;
 
   //Создание услуги 
   let service = document.createElement("span");
-  service.className = 'reviewer-service';
+  service.className = 'reviewer__service';
   service.textContent = json[i].Service;
 
   //Какая услуга 
 
   let serviceDetails = document.createElement("span");
-  serviceDetails.className = 'reviewer-service-details';
+  serviceDetails.className = 'reviewer__service-details';
   serviceDetails.textContent = `${json[i].ServiceDetails} ${json[i].Graft}`;
 
   //Добавление фото 
   let photo = document.createElement('img');
-  photo.className = 'reviewer-photo';
+  photo.className = 'reviewer__photo';
   photo.src = json[i].Photo;
 
 
   //Создание текста   
   let p = document.createElement('p');
-  p.className = 'reviewer-text'
+  p.className = 'reviewer__text'
   p.textContent = json[i].Review
 
   //Создание кнопки  'Подробнее'  
