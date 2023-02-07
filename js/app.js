@@ -1,28 +1,32 @@
-let reviews = document.querySelector('.reviews__block');
+let reviews = document.querySelector('.reviews__list');
 let moreReviews = document.querySelector('.reviews__more');
-let i = 0
-let count = 6;
+let count = 1;
+let checkCount = 1;
 
 moreReviews.addEventListener('click', () => {
- count += 3;
+ count += 1;
  createElem()
 })
 
 async function createElem() {
  // 
- let url = `./files/reviews.json`
+ let url = `./files/reviews-${count}.json`
  let response = await fetch(url)
  let json = await response.json();
  //
- // итерация по json файлу
- if (count > json.length) {
-  moreReviews.style.display = "none"
+ //проверка на следующую ссылку
+ checkCount += 1;
+ let checkUrl = `./files/reviews-${checkCount}.json`
+ let checkResponse = await fetch(checkUrl)
+ if (checkResponse.ok !== true) {
+  moreReviews.style.display = 'none'
  }
- for (i; i < count; i++) {
+ // итерация по json файлу
+ for (i = 0; i < json.length; i++) {
 
   // создание контейнера   
-  let reviewBox = document.createElement("div");
-  reviewBox.className = 'reviewer';
+  let reviewBox = document.createElement("li");
+  reviewBox.className = 'reviews__item reviewer';
 
   //Контейнер для фото и рейтинга
   let reviewerHead = document.createElement("div");
@@ -97,6 +101,7 @@ async function createElem() {
   reviewBox.appendChild(button)
   reviews.appendChild(reviewBox)
  }
+
 
 }
 createElem()
