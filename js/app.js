@@ -1,6 +1,7 @@
 let reviews = document.querySelector('.reviews__list');
 let moreReviews = document.querySelector('.reviews__more');
 let count = 1;
+let items = 3;
 let checkCount = 1;
 
 moreReviews.addEventListener('click', () => {
@@ -10,7 +11,8 @@ moreReviews.addEventListener('click', () => {
 
 async function createElem() {
  // 
- let url = `./files/reviews-${count}.json`
+ let url = `./files/reviews-${count}.json?items=${items}`
+ console.log(url)
  let response = await fetch(url)
  let json = await response.json();
  //
